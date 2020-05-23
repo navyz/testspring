@@ -30,6 +30,6 @@ build/
 ### VS Code ###
 .vscode/
 
-database/
+/database/
 
-derby.log
+/derby.log
