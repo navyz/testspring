@@ -1,4 +1,4 @@
-package sonlmz.testspring;
+package sonlmz.service;
 
 import org.springframework.stereotype.Service;
 
