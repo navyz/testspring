@@ -33,3 +33,6 @@ build/
 /database/
 
 /derby.log
+*.txt
+*.out
+*.log

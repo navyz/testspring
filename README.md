@@ -57,5 +57,5 @@ all these 3 files should be placed in resources folder
 - Update maven\conf\settings.xml (https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/)
 - Run command 
     mvn clean verify sonar:sonar
-    mvn clean install
-    mvn sonar:sonar
+ - Following tasks will be executeds
+    
