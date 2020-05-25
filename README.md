@@ -52,3 +52,10 @@ this will go along with schema.sql file
 5. schema.sql, data.sql, application.properties
 all these 3 files should be placed in resources folder
 
+
+###### Sonar scanner
+- Update maven\conf\settings.xml (https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/)
+- Run command 
+    mvn clean verify sonar:sonar
+    mvn clean install
+    mvn sonar:sonar
