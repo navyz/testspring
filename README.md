@@ -59,3 +59,34 @@ all these 3 files should be placed in resources folder
     mvn clean verify sonar:sonar
  - Following tasks will be executeds
     
+    
+###### remove files from test coverage report
+There are 5 ways to do this. The list below is in time/workflow backward order  
+1. Sonar General Settings: Admistration => Analysis Scope => Coverage Exclusions
+
+2. Sonar Project Settings: Project Settings => General Settings => Analysis Scope => Coverage Exclusions
+
+3. In build command line (NOT WORKING)
+-Dsonar.jacoco.excludes=**/useless/*
+
+tried in this way also
+<properties>
+    <sonar.jacoco.excludes>**/useless/*,**/xxx/*</sonar.jacoco.excludes>
+</properties>
+
+
+4. Define sonar.coverage.exclusions in pom.xml file
+<properties>
+    <sonar.coverage.exclusions>**/useless/*,**/controller/**</sonar.coverage.exclusions>
+</properties>
+
+5. Define jacoco exclude pattern in pom.xml file, under jacoco plugin
+NOT WORKING. 
+These files will not be included in jacoco report, but in sonar, the files are still marked as not tested. 
+
+    <configuration> 
+        <excludes> 
+            <exclude>**/useless/*</exclude> 
+            <exclude>**/xxx/*</exclude> 
+        </excludes> 
+    </configuration>
