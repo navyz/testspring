@@ -17,6 +17,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!--sonar.jacoco.excludes>**/useless/*,**/xxx/*</sonar.jacoco.excludes-->
         <sonar.coverage.exclusions>**/useless/*,**/controller/**</sonar.coverage.exclusions>
+        <sonar.scm.exclusions.disabled>true</sonar.scm.exclusions.disabled>
     </properties>
 
     <modules>
